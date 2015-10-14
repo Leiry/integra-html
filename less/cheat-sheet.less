@@ -1,0 +1,66 @@
+.wrapper{
+    position: relative;
+    width: 90%;
+    margin:auto;
+    overflow: hidden;
+    max-width:960px;
+    & > section{
+        margin-bottom: 30px;
+        &.colors{
+            overflow: hidden;
+            & > div{
+                position: relative;
+                float: left;
+                width: 33%;
+                margin-right: 1%;
+                border:solid 1px #ccc;
+            }
+            .color{
+                box-sizing: border-box;
+                -moz-box-sizing:border-box;
+                padding:5px;
+                position: relative;
+                float: left;
+                width: 33.333%;
+                &#sky{background: @sky;color:@sky - #333}
+                &#sea{background: @sea;color:@sea + #333}
+                &#blue_light{background: @blue_light;color:@blue_light - #333}
+                &#sky_dark{background: @sky_dark;color:@sky_dark - #333}
+                &#sea_light{background: @sea_light;color:@sea_light - #333}
+                &#white{background: @white;color:@white - #555}
+                &#green_light{background: @green_light;color:@green_light - #333}
+                &#red_light{background: @red_light;color:@red_light - #333}
+                &#yellow{background: @yellow;color:@yellow - #333}
+                &#green{background: @green;color:@green - #333}
+                &#red{background: @red;color:@red - #333}
+                &#yellow_dark{background: @yellow_dark;color:@yellow_dark - #555}
+            }
+        }
+        &.elements{
+            .buttons{
+                overflow: hidden;
+                .item{
+                    position: relative;
+                    margin-right: 2%;
+                    float: left;
+                }
+            }
+            .checkboxes{
+                overflow: hidden;
+                .item{
+                    position: relative;
+                    margin-right: 2%;
+                    float: left;
+                }
+            }
+        }
+        &.forms{
+            .item{
+                width: 50%;
+            }
+        }
+        select{
+            width: 100%;
+        }
+    }
+}

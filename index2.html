@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
+    <link rel="stylesheet" type="text/css" href="css/select2.min.css" >
+    <!--<link href="css/interface.css" rel="stylesheet">-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!--        <link rel="stylesheet/less" type="text/css" href="less/interface.less">-->
+    <!--        <script src="js/less.min.js"></script>-->
+    <script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/interface.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+   <script src="js/bootstrap-table-filter.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-table-filter.css">
+
+     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="example-block">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <h1>Заголовок 1</h1>
+        <h2>Заголовок 2</h2>
+        <h3>Заголовок 3</h3>
+        <h4>Заголовок 4</h4>
+        <h5>Заголовок 5</h5>
+        <h6>Заголовок 6</h6>
+        <p><span class="bold">Nullam quis risus</span> eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+    </div>
+    <div class="example-block">
+        <h3>Кнопки</h3>
+        <button class="btn">Button text</button><br>
+        <button class="btn btn__small">Button text</button><br>
+        <button class="bnt-color">Button text</button><br>
+        <button class="bnt-color bnt-color__small">Button text</button>
+    </div>
+    <div class="example-block">
+    <section class="elements">
+        <h3>Elements</h3>
+        <h5>Checkboxes</h5>
+        <div class="form-group checkbox-group">
+            <div class="checkbox">
+                <input type="checkbox" name="optionsCheckbox" id="optionsCheckbox">
+                <label for="optionsCheckbox"></label>
+                Запомнить меня
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="optionsCheckbox" id="optionsCheckbox2" checked>
+                <label for="optionsCheckbox2"></label>
+            </div>
+        </div>
+        <h5>Radio</h5>
+        <div class="form-group radio-group">
+            <div class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios">
+                <label for="optionsRadios"></label>
+            </div>
+            <div class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" checked>
+                <label for="optionsRadios2"></label>
+            </div>
+        </div>
+        <h5>Toggle</h5>
+        <div class="form-group toggle">
+            <div class="checkbox">
+                <input type="checkbox" name="optionsToggle" id="optionsToggle">
+                <label for="optionsToggle"></label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="optionsToggle2" id="optionsToggle2" checked>
+                <label for="optionsToggle2"></label>
+            </div>
+        </div>
+    </section>
+    </div>
+    <div class="example-block">
+    <section class="forms">
+        <h3>Forms</h3>
+        <p>Чтобы появлялась иконка очистки поля ввода присвойте input'у класс 'allow-clear'. Иконка появляется, если поле не пустое</p>
+        <h4>Bootsrap</h4>
+
+        <div class="form-group">
+            <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+            <input type="text" class="form-control allow-clear"  aria-describedby="inputSuccess5Status">
+            <!--<div class="glyphicon glyphicon-remove" aria-hidden="true"></div>-->
+        </div>
+        <div class="form-group">
+            <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+            <textarea class="form-control allow-clear"  aria-describedby="inputSuccess5Status"></textarea>
+            <!--<div class="glyphicon glyphicon-remove" aria-hidden="true"></div>-->
+        </div>
+        <div class="form-group has-success has-feedback">
+            <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+            <input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status">
+            <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <span id="inputSuccess5Status" class="sr-only">(success)</span>
+        </div>
+        <div class="form-group has-error has-feedback">
+            <div class="error-massage">Ваш email уже был добавлен в рассылку</div>
+            <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            <span id="inputError2Status" class="sr-only">(error)</span>
+        </div>
+        <div class="dropdown open">
+            <button class="dropdown-toggle text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown
+                <div class="caret-color pull-right"><span class="caret "></span></div>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <div class="btn-group caret-btn">
+            <button type="button" class="dropdown-toggle dropdown-toggle-caret" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Мой профиль</a></li>
+                <li><a href="#">Настройки профиля</a></li>
+                <li><a href="#">Выйти</a></li>
+            </ul>
+        </div>
+        <div class="form-group search">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+                <button class="btn" type="button"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </section>
+    </div>
+    <div class="example-block">
+        <h3>System messages (full width)</h3>
+        <div class="alert alert-success">Ваш email уже был добавлен в рассылку
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fa fa-times"></i></span>
+            </button>
+        </div>
+        <div class="alert alert-warning">Ваш email добавлен в рассылку
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fa fa-times"></i></span>
+            </button>
+        </div>
+        <div class="alert alert-warning" role="alert">
+            Рекомендуется заполнить опросник сегодня до 8 часов утра.
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fa fa-times"></i></span>
+            </button>
+        </div>
+        <div class="alert alert-danger" role="alert">
+            Заполните поле
+        </div>
+    </div>
+    <div class="example-block">
+        <div class="icon-new">
+            <i class="fa fa-graduation-cap"></i>
+        </div>
+        <div class="icon-new">
+            <i class="fa fa-book"></i>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Вход</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mail">
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <input type="text" class="form-control" aria-describedby="inputSuccess5Status"
+                               placeholder="Ваш e-mail">
+                    </div>
+                    <div class="form-group password">
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <input type="text" class="form-control" aria-describedby="inputSuccess5Status"
+                               placeholder="Ваш пароль">
+                    </div>
+                    <button class="bnt-color bnt-color__small">Войти</button>
+                    <br>
+
+                    <div class="clearfix">
+                        <div class="form-group checkbox-group pull-left">
+                            <div class="checkbox">
+                                <input type="checkbox" name="ooptionsCheckbox" id="ooptionsCheckbox">
+                                <label for="ooptionsCheckbox"></label>
+                                Запомнить меня
+                            </div>
+                        </div>
+                        <a href="#" class="pull-right">Забыли пароль?</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    Нажимая на кнопку «Вход» Вы подтверждаете согласие с
+                    <a href="#">Политикой конфиденциальности</a> и <a href="#">Условиями пользования сайтом</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-block"> <!--  Отзыв о тренере-->
+        <div class="review">
+            <div class="head">
+                <div class="clearfix">
+                    <div class="author pull-left">
+                        <img src="http://www.anfiska.biz/razn/80.jpg" alt="">
+                    </div>
+                    <div class="text pull-left">
+                        <a href="#">Александр Песков</a><br>Тренер
+                    </div>
+                </div>
+                <p>Отзыв оставил: <a href="#">Иван Иванов</a></p>
+
+                <div class="raiting-block">
+                    Оценка:
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="content-container">
+                <p>Повседневная практика показывает,
+                    что укрепление и развитие структуры в значительной степени обуславливает создание модели развития.
+                    Повседневная практика показывает, что рамки и место обучения кадров представляет собой интересный
+                    эксперимент проверки существенных финансовых и административных условий.</p>
+            </div>
+            <div class="toolbar text-right">
+                <data>25 мая 2015</data>
+                <a href="#">Читать весь отзыв</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-block"> <!--  Отзыв о тренинге-->
+        <div class="review training">
+            <div class="head">
+                <div class="clearfix">
+                    <div class="text pull-left">
+                        Тренинг: <a href="#">Духовная интеграционика -1</a><br>
+                    </div>
+                </div>
+                <p>Отзыв оставил: <a href="#">Иван Иванов</a></p>
+
+                <div class="raiting-block">
+                    Оценка:
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="content-container">
+                <p>Повседневная практика показывает,
+                    что укрепление и развитие структуры в значительной степени обуславливает создание модели развития.
+                    Повседневная практика показывает, что рамки и место обучения кадров представляет собой интересный
+                    эксперимент проверки существенных финансовых и административных условий.</p>
+            </div>
+            <div class="toolbar text-right">
+                <data>25 мая 2015</data>
+                <a href="#">Читать весь отзыв</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-block big">
+        <h2>Информация о тренинге</h2>
+        <table class="table abouttrainig">
+            <tbody>
+            <tr>
+                <td>Название: <span>Духовная Интеграционика-1</span></td>
+                <td>Стоимость участия: <span>40 000 р.</span></td>
+                <td>Количество участников: <span>20</span></td>
+            </tr>
+            <tr>
+                <td>Дата: <span>28 февраля - 1 марта, 2015</span></td>
+                <td>Стоимость бронирования: <span>10 000 р.</span></td>
+                <td>Полная оплата: <span>16</span></td>
+            </tr>
+            <tr>
+                <td>Город: <span>Москва</span></td>
+                <td>Льготная стоимость: <span>30 000 р.</span></td>
+                <td>Бронь: <span>4</span></td>
+            </tr>
+            <tr>
+                <td>Тренер: <a href="#">Иванов Иван Иванович</a></td>
+                <td>Окончание льготного периода: <span>25.12.15</span></td>
+                <td><p class="allpaid text-center pull-right">Всего оплачено: <span>680 000 р.</span><br>
+                    Остаток оплаты: <span>120 000 р</span></p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="example-block big">
+        <table class="table members">
+                <thead>
+                <tr>
+                    <td>ФИО</td>
+                    <td>Электронный адрес</td>
+                    <td>Телефон</td>
+                    <td>Статус оплаты</td>
+                    <td></td>
+                </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">Иванов Иван Иванович</a></td>
+                    <td><span>ivano11111111111111111111111111111111111111111111111111v.i.i.@gmail.com</span></td>
+                    <td>+7 (918) 888-88-88</td>
+                    <td>Оплачено</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Иванов Иван ИвановичИвановичИвановичИвановичИвановичИвановичИвановичИвановичИвановичИвановичИванович</a></td>
+                    <td><span>ivanov.i.i.@gmail.com</span></td>
+                    <td>+7 (918) 888-88-88</td>
+                    <td>Оплачено</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="example-block big" style="padding-left: 300px; padding-bottom: 100px;"> <!-- Подписка -->
+        <div class="subscription">
+            <div class="subscription-container">
+            <div class="head clearfix">
+                <h4 class="pull-left">Подписка на новости сайта</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fa fa-close"></i></span>
+                </button>
+            </div>
+            <div class="form-group mail">
+                <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                <input type="text" class="form-control" aria-describedby="inputSuccess5Status"
+                       placeholder="Введите Ваш e-mail">
+            </div>
+            <button class="bnt-color"><i class="fa fa-envelope"></i>Подписаться</button>
+        </div>
+            </div>
+    </div>
+
+</div>
+</body>
+</html>

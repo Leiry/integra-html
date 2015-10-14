@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
+    <link href="css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/interface.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+
+    <!-- Скрипт плавного перехода -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('a[href^="#"]').click(function () {
+                elementClick = $(this).attr("href");
+                destination = $(elementClick).offset().top;
+                if($.browser.safari){
+                    $('body').animate( { scrollTop: destination }, 1100 );
+                }else{
+                    $('html').animate( { scrollTop: destination }, 1100 );
+                }
+                return false;
+            });
+        });
+    </script>
+
+</head>
+<body>
+<main id="questionnaire">
+    <section class="questionnaire-top">
+        <h2 class="text-center">Путь к Мастерству - Мои Достижения!</h2>
+    </section>
+    <div class="wrapper">
+        <div id="filter-bar"> </div>
+        <table id="tbl" data-toggle="table" data-height="299" data-url="data1.json" data-toolbar="#filter-bar" data-show-toggle="true" data-show-columns="true" data-show-filter="true">
+            <thead>
+            <tr>
+                <th data-field="id" data-align="right" data-sortable="true">Item ID</th>
+                <th data-field="name" data-align="center" data-sortable="true">Item Name</th>
+                <th data-field="price" data-align="" data-sortable="true">Item Price</th>
+            </tr>
+            </thead>
+        </table>
+
+        <div class="alert alert-warning" role="alert">
+            Рекомендуется заполнить опросник сегодня вечером или завтра до 8 часов утра.
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fa fa-times"></i></span>
+            </button>
+        </div>
+        <h3>Опросный лист (<span>28.07.15</span>)</h3>
+        <div class="questions clearfix">
+            <div class="left pull-left">
+                <form method="post">
+                    <div class="form-group block-choose">
+                        <div class="choose-item clearfix">
+                            <p class="pull-left">1. Эмоциональный фон</p>
+                            <div class="pull-right">
+                                <span class="amount">2,6</span>
+                                <button>Выбрать</button>
+                            </div>
+                        </div>
+                        <div class="choose-item clearfix">
+                            <p class="pull-left">2. Уровень сознания</p>
+                            <div class="pull-right">
+                                <span class="amount">266</span>
+                                <button>Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <div class="alert alert-danger" role="alert">
+                            Заполните поле
+                        </div>
+                        <p class="range text-right">Диапазон оценки: от 0 до 1000 баллов</p>
+                        <p class="pull-left">3. Уровень энергии</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <input type="text" class="form-control allow-clear"  aria-describedby="inputSuccess5Status">
+                    </div>
+                    <div class="form-group clearfix">
+                        <p class="pull-left">4. Уровень силы</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <input type="text" class="form-control allow-clear"  aria-describedby="inputSuccess5Status">
+                    </div>
+                    <div class="form-group clearfix">
+                        <p class="pull-left">5. Уровень причинности</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <input type="text" class="form-control allow-clear"  aria-describedby="inputSuccess5Status">
+                    </div>
+                    <div class="form-group clearfix">
+                        <p class="pull-left">6. Уровень свободы</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <input type="text" class="form-control allow-clear"  aria-describedby="inputSuccess5Status">
+                    </div>
+                    <div class="form-group clearfix">
+                        <p class="pull-left">7. Уровень везения</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <input type="text" class="form-control allow-clear"  aria-describedby="inputSuccess5Status">
+                    </div>
+                    <div class="form-group clearfix">
+                        <p class="pull-left">8. Уровень калибра</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <input type="text" class="form-control allow-clear"  aria-describedby="inputSuccess5Status">
+                    </div>
+                    <div class="form-group question-textarea">
+                        <p class="">9. Что сегодня прорабатывали?</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <textarea class="form-control allow-clear"  aria-describedby="inputSuccess5Status"></textarea>
+                    </div>
+                    <div class="form-group question-textarea">
+                        <p class="">10. Текущее состояние</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <textarea class="form-control allow-clear"  aria-describedby="inputSuccess5Status"></textarea>
+                    </div>
+                    <div class="form-group question-textarea">
+                        <p class="">11. Что вы сегодня сделали, чтобы приблизиться к своей цели?</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <textarea class="form-control allow-clear"  aria-describedby="inputSuccess5Status"></textarea>
+                    </div>
+                    <div class="form-group question-textarea">
+                        <p class="">12. Что произошло за день?</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <textarea class="form-control allow-clear"  aria-describedby="inputSuccess5Status"></textarea>
+                    </div>
+                    <div class="form-group question-textarea">
+                        <p class="">13. Что хорошего произошло за день?</p>
+                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                        <textarea class="form-control allow-clear"  aria-describedby="inputSuccess5Status"></textarea>
+                    </div>
+
+                    <div class="form-group radio-group">
+                        14. Мысль дня: <a href="#">"Как победить свою лень"</a>
+                        <div class="radio">
+                            <input type="radio" name="optionsRadios" id="optionsRadios">
+                            <label for="optionsRadios"></label>
+                             проработана
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2">
+                            <label for="optionsRadios2"></label>
+                             не проработана
+                        </div>
+                    </div>
+
+                    <button class="bnt-color">Сохранить мои результаты</button>
+                </form>
+        </div>
+            <div class="right pull-right">
+                <h4>Шкала тонов</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                </button>
+                <table class="table tone-scale">
+                    <tbody>
+                        <tr>
+                            <td>40.00</td>
+                            <td>Безмятежность бытия</td>
+                        </tr>
+                        <tr>
+                            <td>30.00</td>
+                            <td>Постулаты</td>
+                        </tr>
+                        <tr>
+                            <td>22.00</td>
+                            <td>Игры</td>
+                        </tr>
+                        <tr>
+                            <td>20.00</td>
+                            <td>Действия</td>
+                        </tr>
+                        <tr>
+                            <td>8.00</td>
+                            <td>Воодушевление</td>
+                        </tr>
+                        <tr>
+                            <td>6.00</td>
+                            <td>Эстетика</td>
+                        </tr>
+                        <tr>
+                            <td>4.00</td>
+                            <td>Энтузиазм</td>
+                        </tr>
+                        <tr>
+                            <td>3.50</td>
+                            <td>Радость</td>
+                        </tr>
+                        <tr>
+                            <td>3.30</td>
+                            <td>Сильный интерес</td>
+                        </tr>
+                        <tr>
+                            <td>3.00</td>
+                            <td>Консерватизм</td>
+                        </tr>
+                        <tr>
+                            <td>2.90</td>
+                            <td>Умеренный интерес</td>
+                        </tr>
+                        <tr>
+                            <td>2.80</td>
+                            <td>Удовлетворенность</td>
+                        </tr>
+                        <tr>
+                            <td>2.60</td>
+                            <td>Отсутствие интереса</td>
+                        </tr>
+                        <tr>
+                            <td>2.50</td>
+                            <td>Скука</td>
+                        </tr>
+                        <tr>
+                            <td>2.40</td>
+                            <td>Монотонность</td>
+                        </tr>
+                        <tr>
+                            <td>2.00</td>
+                            <td>Антагонизм</td>
+                        </tr>
+                        <tr>
+                            <td>1.90</td>
+                            <td>Враждебность</td>
+                        </tr>
+                        <tr>
+                            <td>1.80</td>
+                            <td>Боль</td>
+                        </tr>
+                        <tr>
+                            <td>1.50</td>
+                            <td>Гнев</td>
+                        </tr>
+                        <tr>
+                            <td>1.40</td>
+                            <td>Ненависть</td>
+                        </tr>
+                        <tr>
+                            <td>1.30</td>
+                            <td>Возмущение</td>
+                        </tr>
+                        <tr>
+                            <td>1.20</td>
+                            <td>Отсутствие сочувствия</td>
+                        </tr>
+                        <tr>
+                            <td>1.15</td>
+                            <td>Скрытое возмущение</td>
+                        </tr>
+                        <tr>
+                            <td>1.10</td>
+                            <td>Скрытая враждебность</td>
+                        </tr>
+                        <tr>
+                            <td>1.02</td>
+                            <td>Беспокойство</td>
+                        </tr>
+                        <tr>
+                            <td>1.00</td>
+                            <td>Страх</td>
+                        </tr>
+                        <tr>
+                            <td>0.98</td>
+                            <td>Отчаяние</td>
+                        </tr>
+                        <tr>
+                            <td>0.96</td>
+                            <td>Ужас</td>
+                        </tr>
+                        <tr>
+                            <td>0.94</td>
+                            <td>Оцепенение</td>
+                        </tr>
+                        <tr>
+                            <td>0.90</td>
+                            <td>Сочувствие</td>
+                        </tr>
+                        <tr>
+                            <td>0.80</td>
+                            <td>Задабривание</td>
+                        </tr>
+                        <tr>
+                            <td>0.40</td>
+                            <td>Горе</td>
+                        </tr>
+                        <tr>
+                            <td>0.30</td>
+                            <td>Незаслуживающий</td>
+                        </tr>
+                        <tr>
+                            <td>0.20</td>
+                            <td>Самоуничижение</td>
+                        </tr>
+                        <tr>
+                            <td>0.10</td>
+                            <td>Жертва</td>
+                        </tr>
+                        <tr>
+                            <td>0.07</td>
+                            <td>Безнадежность</td>
+                        </tr>
+                        <tr>
+                            <td>0.05</td>
+                            <td>Апатия</td>
+                        </tr>
+                        <tr>
+                            <td>0.03</td>
+                            <td>Бесполезность</td>
+                        </tr>
+                        <tr>
+                            <td>0.01</td>
+                            <td>Умирание</td>
+                        </tr>
+                        <tr>
+                            <td>0.00</td>
+                            <td>Смерть тела</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Карта сознания</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                </button>
+                <table class="table map">
+                    <thead>
+                    <tr>
+                        <td></td>
+                        <td>Энергетический</br> уровень</td>
+                        <td>Восприятие</br> жизни</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>700</td>
+                        <td>Просветление</td>
+                        <td>Чистое сознание</td>
+                    </tr>
+                    <tr>
+                        <td>600</td>
+                        <td>Гармония</td>
+                        <td>Вдохновение</td>
+                    </tr>
+                    <tr>
+                        <td>540</td>
+                        <td>Радость</td>
+                        <td>Преображение</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>Любовь</td>
+                        <td>Откровение</td>
+                    </tr>
+                    <tr>
+                        <td>400</td>
+                        <td>Разум</td>
+                        <td>Обобщение</td>
+                    </tr>
+                    <tr>
+                        <td>350</td>
+                        <td>Принятие</td>
+                        <td>Превосходство</td>
+                    </tr>
+                    <tr>
+                        <td>310</td>
+                        <td>Готовность</td>
+                        <td>Намерение</td>
+                    </tr>
+                    <tr>
+                        <td>250</td>
+                        <td>Нейтралитет</td>
+                        <td>Освобождение</td>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>Смелость</td>
+                        <td>Полномочия</td>
+                    </tr>
+                    <tr>
+                        <td>175</td>
+                        <td>Гордыня</td>
+                        <td>Чванство</td>
+                    </tr>
+                    <tr>
+                        <td>150</td>
+                        <td>Гордыня</td>
+                        <td>Агрессия</td>
+                    </tr>
+                    <tr>
+                        <td>125</td>
+                        <td>Желание</td>
+                        <td>Зависимость</td>
+                    </tr>
+                    <tr>
+                        <td>100</td>
+                        <td>Страх</td>
+                        <td>Убегание</td>
+                    </tr>
+                    <tr>
+                        <td>75</td>
+                        <td>Горе</td>
+                        <td>Уныние</td>
+                    </tr>
+                    <tr>
+                        <td>50</td>
+                        <td>Апатия</td>
+                        <td>Отречение</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>Чувство вины</td>
+                        <td>Разрушение</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Позор</td>
+                        <td>Уничтожение</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

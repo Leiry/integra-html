@@ -1,0 +1,45 @@
+@media screen and (min-width: 1000px) {
+  #home section.block1 {
+    height: 635px;
+  }
+  #home section.block1 .left {
+    height: 100%;
+  }
+  #home section.block1 .left .icon-arrow-down {
+    bottom: 0px;
+  }
+  #home section.block1 .right {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1350px) {
+  #home section.block1 {
+    height: 605px;
+  }
+  #home section.block1 .left {
+    height: 100%;
+  }
+  #home section.block1 .right {
+    padding: 25px 0 43px 45px;
+  }
+}
+@media screen and (min-height: 820px) {
+  #home section.block1 {
+    height: 910px;
+  }
+  #home section.block1 .left .left-container {
+    padding-top: 130px;
+  }
+  #home section.block1 .left .icon-arrow-down {
+    bottom: 83px;
+  }
+  #home section.block1 .right .right-container h4 {
+    padding-bottom: 100px;
+  }
+  #home section.block1 .right .livetraining {
+    margin-top: 60px;
+  }
+  #home section.block1 .right .toschedule {
+    bottom: 100px;
+  }
+}

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
+    <link href="css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/media.css" rel="stylesheet">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/interface.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+
+    <!-- Скрипт плавного перехода -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('a[href^="#"]').click(function () {
+                elementClick = $(this).attr("href");
+                destination = $(elementClick).offset().top;
+                if($.browser.safari){
+                    $('body').animate( { scrollTop: destination }, 1100 );
+                }else{
+                    $('html').animate( { scrollTop: destination }, 1100 );
+                }
+                return false;
+            });
+        });
+    </script>
+
+</head>
+<body>
+<header class="header clearfix">
+    <div class="logo pull-left">
+        Духовная</br> Интеграционионика
+    </div>
+    <div class="pull-right"><button class="bnt-color bnt-color__small" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in"></i>Войти</button></div>
+    <div class="mainmenu pull-right">
+        <ul class="mainmenu text">
+            <li><a href="#">Расписание тренингов</a></li>
+            <li><a href="#">Тренеры</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Репортажи</a></li>
+            <li><a href="#">Вопросы и ответы</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <ul class="mainmenu icons">
+            <li><a href="#"><i class="fa fa-calendar"></i></a></li>
+            <li><a href="#"><i class="fa fa-users"></i></a></li>
+            <li><a href="#"><i class="fa fa-quote-right"></i></a></li>
+            <li><a href="#"><i class="fa fa-film"></i></a></li>
+            <li><a href="#"><i class="fa fa-comments"></i></a></li>
+            <li><a href="#"><i class="fa fa-book"></i></a></li>
+            <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
+        </ul>
+    </div>
+</header>
+
+<main id="home">
+    <section class="block1 clearfix">
+        <div class="left pull-left">
+            <div class="left-container">
+                <p>Откройте в себе скрытые ресурсы и способности и научитесь их использовать на 110%</p>
+                <ul>
+                    <li>Получите простую и практичную технологию быстрого исправления того, что в вашей жизни идёт не так</li>
+                    <li>Не нужны 5-7-часовые сеансы психотерапии</li>
+                    <li>Технология совершенно безопасна</li>
+                    <li>Эффективность подтверждена неоднократными научными исследованиями</li>
+                </ul>
+            </div>
+            <div class="icon-arrow-down">
+               <a href="#block2" class="scroll">
+                    <img src="images/icon-header3.png">
+               </a>
+            </div>
+        </div>
+        <div class="right pull-right">
+            <div class="right-container">
+                <h4>Живые тренинги</h4>
+                <div class="livetrainings">
+                    <div class="livetraining clearfix">
+                        <div class="training-icon icon2 pull-left"></div>
+                        <div class="training-info pull-left">
+                            <a href="#" class="city">Санкт-Петербург</a>
+                            <p>03 - 05 июля</p>
+                            <p class="author">Константин Ловцов</p>
+                        </div>
+                    </div>
+                    <div class="livetraining clearfix">
+                        <div class="training-icon icon1 pull-left "></div>
+                        <div class="training-info pull-left">
+                            <a href="#" class="city">Санкт-Петербург</a>
+                            <p>03 - 05 июля</p>
+                            <p class="author">Константин Ловцов</p>
+                        </div>
+                    </div>
+                    <div class="livetraining clearfix">
+                        <div class="training-icon icon2 pull-left "></div>
+                        <div class="training-info pull-left">
+                            <a href="#" class="city">Санкт-Петербург</a>
+                            <p>03 - 05 июля</p>
+                            <p class="author">Константин Ловцов</p>
+                        </div>
+                    </div>
+                    <div class="livetraining clearfix">
+                        <div class="training-icon icon1 pull-left"></div>
+                        <div class="training-info pull-left">
+                            <a href="#" class="city">Санкт-Петербург</a>
+                            <p>03 - 05 июля</p>
+                            <p class="author">Константин Ловцов</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#anchor" class="toschedule">Перейти к полному расписанию</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block2" id="block2">
+        <div class="wrapper">
+            <h1 class="text-center">Что означает «духовная интеграционика» (ДИ)?</h1>
+            <div class="clearfix">
+                <div class="left pull-left">
+                    <p>
+                        <b>Духовная</b> – потому что работает с тонкими (духовными) материями. За три дня вы научитесь быстро приобретать способности и возможности, которые открываются после десятилетий традиционного обучения и самопроработки.
+                    </p>
+                </div>
+                <div class="right pull-right">
+                    <p>
+                        <b>Интеграционика</b> – потому что помогает вам собрать себя в единое целое. Увидеть, принять и научиться использовать те свои качества и способности, которые вы раньше не замечали. Научиться включать мозг на 110% каждый раз, когда это нужно. И для этого духовная интеграционика объединяет самые сильные психотехники из различных школ и течений.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="block3 block">
+        <div class="wrapper">
+        <h1 class="text-center">Выберите подходящего тренера и освойте <br> духовную интеграционику за 3 дня</h1>
+        <a href="#" class="choosetrainer">Выбрать тренера</a>
+            </div>
+    </section>
+
+    <section class="block4 block">
+        <div class="wrapper">
+            <div class="text">
+                <h4>Если считаете себя обычным человеком, вы себя обманываете</h4>
+                <p>У вас изначально, с самого рождения есть все ресурсы, таланты и способности, необходимые для построения яркой и счастливой жизни.</p>
+                <p>Даже если вы вроде как обычный человек. И как ни пытались, не нашли в себе ничего особенного.</p>
+                <p>Все эти ресурсы спят глубоко в вашем подсознании и лишь время от времени вырываются наружу. И тогда вы чувствуете себя сильным, полным энергии. У вас всё получается, трудные задачи щёлкаете как орешки и вообще вы на высоте.</p>
+                <p>Так бывает не всегда. Кажется, что это происходит случайно. Потому что вы хорошо выспались, на вас действует солнечная погода, музыка завела и т.д.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="block5 block">
+        <div class="wrapper">
+            <h3>Если научиться включать весь свой ресурс, пробуждать нужные способности в нужный момент, ваша жизнь кардинально изменится</h3>
+            <div class="clearfix">
+                <p class="left pull-left">Например, вы хотите увеличить доход. И пока не видите для этого возможностей. Но включив нужную способность, вы такую возможность обнаруживаете. Находите интересную бизнес-идею, которую до сих пор не замечали.</p>
+                <p class="right pull-right">Или развиваете в себе концентрацию, творческое мышление, поднимаете работоспособность – и зарабатываете повышение и увеличение зарплаты. Или в голове вдруг щёлкает и приходит идея, как заработать на своём хобби – даже если это вроде бы невозможно.</p>
+            </div>
+            <p>И так в каждом аспекте вашей жизни. Представляете, какие возможности перед вами откроются? И для их появления и реализации у вас уже всё есть. Осталось вытащить это из подсознания и начать получать от него пользу.</p>
+            <p>И именно для этого создана духовная интеграционика. В ней много инструментов для поиска и освобождения скрытых ресурсов. Но главный и самый сильный, доступный каждому – реинтеграция.</p>
+            <p>Суть ДИ – это умение проводить реинтеграции для самого себя и других. Мягко перестраивать личность и жизнь в нужном направлении. Сначала – только свою. Затем – любую другую.</p>
+        </div>
+    </section>
+
+    <section class="block6">
+        <div class="wrapper">
+            <h4><span class="bold">Вот как работают реинтеграции. </span><br> Представьте, что сможете делать так когда угодно</h4>
+            <div class="video">
+                <iframe width="620" height="430" src="http://zews.software-dowlatow.ru/mediaembed/cqB0O2QTa91435061421" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="block7">
+        <div class="wrapper with-icon clearfix">
+            <div class="left pull-left">
+                <h4>Если вы уже получаете реинтеграции, и они работают</h4>
+                <p>Тогда вам кажется, что учиться тут нечему. Можно их просто слушать.</p>
+                <p>Но реинтеграций в проектах и тренингах Константина Довлатова не так уж много, и доступ к ним ограничен.</p>
+                <p>И если есть какая-то проблема, которую хочется решить прямо сейчас, проще за 5 минут сделать нужную реинтеграцию самому, чем искать её у К. Довлатова. К тому же, это намного дешевле – ничто не мешает вам проводить для себя реинтеграции хоть каждый день.</p>
+                <p>К тому же, если вы научитесь проводить реинтеграции сами себе, то реинтеграции самого К. Довлатова будут давать вам гораздо больше пользы. Проверено на участниках первого тренинга по ДИ.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="DI-1">
+        <div class="wrapper clearfix">
+            <h6 class="pull-left">А научиться самостоятельно проводить реинтеграции вы можете на курсе «ДИ-1».</h6>
+            <a href="#block10" class="learnmore pull-right">
+                Узнать, что такое курс «ДИ-1»
+            </a>
+        </div>
+    </section>
+
+    <section class="block8">
+        <div class="wrapper with-icon clearfix">
+            <div class="left pull-left">
+                <h4>А если реинтеграции не работают?</h4>
+                <p>Но ведь ваши ресурсы, таланты и способности всё ещё с <br> вами. Просто что-то мешает им сразу проявиться в полную силу.</p>
+                <p>И если регулярно слушать реинтеграции и тщательно  отслеживать все изменения в себе и своей жизни, вы  поймёте, что реинтеграции всё же работают. Но почему-то медленно.</p>
+                <p>Это нормально – у каждого своя скорость. И чтобы её увеличить, нужно устранить препятствия, которые тормозят ваше развитие.</p>
+                <p>С помощью реинтеграций можно и это сделать. Но К. Довлатов таких реинтеграций не даёт – потому что универсального решения тут нет. Каждый должен пройти свой собственный путь.</p>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </section>
+
+    <section class="DI-1">
+        <div class="wrapper clearfix">
+            <h6 class="pull-left">Единственный способ подняться на этот уровень (и получить шанс пойти выше, к ещё большим возможностям) – пройти курс «ДИ-1»</h6>
+            <a href="#block10" class="learnmore pull-right">
+                Узнать, что такое курс «ДИ-1»
+            </a>
+        </div>
+    </section>
+
+    <section class="block9">
+        <div class="wrapper">
+            <h4>Но что если вы вообще не слушали реинтеграции?</h4>
+            <p>Тогда у вас есть выбор.</p>
+            <p>Вы можете получить доступ к реинтеграциям, попробовать их – и рано или поздно прийти к выводу, что нужно научиться проводить их для себя самостоятельно.</p>
+            <p>А можете сразу пойти на курс «ДИ-1». И сэкономить время и деньги – потому как в открытом доступе реинтеграций нет.</p>
+            <div class="icon">
+                <a href="#block10" class="arrow-down"  class="scroll">
+                    <img src="images/icon-block8.png">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block10 block" id="block10">
+        <div class="wrapper">
+            <h2 class="text-center">Что такое курс «ДИ-1»</h2>
+            <div class="clearfix">
+            <div class="left pull-left">
+                <p>Это курс, на котором вы научитесь проводить реинтеграции для самого себя. Константин Довлатов провёл его только один раз и больше проводить не будет.</p>
+                <p>Но он подготовил тренеров, которые могут научить вас проводить реинтеграции не хуже его самого. И для вас это отличный шанс. Потому что пока что стоимость услуг этих тренеров в разы ниже, чем у К. Довлатова. А качество такое же.</p>
+            </div>
+            <div class="right pull-right">
+                <p>Почему так? Потому что эти люди не настолько известны и прямо сейчас не могут получать такие же гонорары. А вот способности у них такие же – за это К. Довлатов ручается, потому что лично знает и проверил каждого.</p>
+                <p>Поэтому ловите момент: научитесь проводить для себя любые реинтеграции. Пока тренеры не набрали вес и не повысили ценники.</p>
+            </div>
+                </div>
+        </div>
+    </section>
+    <section class="block11">
+        <div class="wrapper">
+            <h1>Постройте нового, лучшего себя</h1>
+            <p>Это не намного сложней, чем собирать <br> конструктор LEGO</p>
+            <div class="icon-arrow-down">
+                <a href="#block12" class="scroll">
+                    <img src="images/icon-header3.png">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="block12" id="block12">
+        <div class="wrapper">
+            <p>Для этого вам нужно научиться проводить реинтеграции самому себе.</p>
+            <p>Тогда вы сможете целенаправленно, каждый день, делать именно те реинтеграции, которые необходимы вам в текущий момент. Закрывать самые животрепещущие проблемы и не ждать, когда выйдет подходящая реинтеграция.</p>
+            <p>Научиться этому у самого Константина Довлатова уже нельзя. Но вы можете выбрать одного из тренеров, которых он подготовил – и за которых ручается.</p>
+            <p>Плюс – вы сильно сэкономите, не потеряв в качестве. Но только сейчас и на ближайшем тренинге по ДИ. Чем позже, тем выше будут ценники – потому что вырастет уровень тренеров.</p>
+        </div>
+    </section>
+
+    <section class="block13">
+        <div class="wrapper">
+            <h3>Выберите тренера, который научит вас делать то, что для всех остальных выглядит волшебством</h3>
+            <div class="trainer-top">
+            <!--<a class="item scroll-to" data-target=".safiullina" href="#">
+                <div class="photo-container">
+                    <p class="name">Эльмира Сафиуллина</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/8-b.png" alt="">
+                </div>
+                <div class="photo-container hover">
+                    <p class="name">Эльмира Сафиуллина</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/8.png" alt="">
+                </div>
+                <p class="slogan">"В этом мире возможно все!"</p>
+            </a>-->
+            <a class="item scroll-to" data-target=".dovlatov"  href="#">
+                <div class="photo-container">
+                    <p class="name">Константин Довлатов</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/7-b.png" alt="">
+                </div>
+                <div class="photo-container hover">
+                    <p class="name">Константин Довлатов</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/7.png" alt="">
+                </div>
+                <p class="slogan">"Невозможно <b>вдруг</b> начать новую жизнь."</p>
+            </a>
+            </div>
+
+            <div class="clearfix">
+            <a class="item scroll-to" data-target=".block13" href="#">
+                <div class="photo-container">
+                    <p class="name">Александр Песков</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/1-b.png" alt="">
+                </div>
+                <div class="photo-container hover">
+                    <p class="name">Александр Песков</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/1-hover.png" alt="">
+                </div>
+                <p class="slogan">"Всегда есть другой путь"</p>
+            </a>
+            <a class="item scroll-to" data-target=".block14"  href="#">
+                <div class="photo-container">
+                    <p class="name">Константин Ловцов</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/2-b.png" alt="">
+                </div>
+                <div class="photo-container hover">
+                    <p class="name">Константин Ловцов</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/2-hover.png" alt="">
+                </div>
+                <p class="slogan">"Дух и материя - две стороны одного целого"</p>
+            </a>
+            <a class="item scroll-to" data-target=".block15"  href="#">
+                <div class="photo-container">
+                    <p class="name">Андрей Горбачёв</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/3-b.png" alt="">
+                </div>
+                <div class="photo-container hover">
+                    <p class="name">Андрей Горбачёв</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/3-hover.png" alt="">
+                </div>
+                <p class="slogan">"Приноси пользу людям, получай от этого удовольствие и будет вам счастье"</p>
+            </a>
+            <a class="item scroll-to" data-target=".block15 .n2"  href="#">
+                <div class="photo-container">
+                    <p class="name">Олег Соколов</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/4-b.png" alt="">
+                </div>
+                <div class="photo-container hover">
+                    <p class="name">Олег Соколов</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/4-hover.png" alt="">
+                </div>
+                <p class="slogan">"Жизнь и цивилизация"</p>
+            </a>
+            <a class="item scroll-to" data-target=".block16"  href="#">
+                <div class="photo-container">
+                    <p class="name">Павел Двойнишников</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/5-b.png" alt="">
+                </div>
+                <div class="photo-container hover">
+                    <p class="name">Павел Двойнишников</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/5-hover.png" alt="">
+                </div>
+                <p class="slogan">"Жить. Проживать. Осознавать. Отпускать. Жить."</p>
+            </a>
+            <a class="item scroll-to" data-target=".block16 .n2"  href="#">
+                <div class="photo-container">
+                    <p class="name">Сабина Ефремова</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/6-b.png" alt="">
+                </div>
+                <div class="photo-container hover">
+                    <p class="name">Сабина Ефремова</p>
+                    <div class="fader"></div>
+                    <img src="images/photos/6-hover.png" alt="">
+                </div>
+                <p class="slogan">"Жить - это интересно!"</p>
+            </a>
+                </div>
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <section class="clearfix">
+        <div class="logo pull-left">
+            Духовная</br> Интеграционионика
+        </div>
+        <div class="pull-right">
+            <span>Служба поддержки:</span></br><a href="">support@dowlatow.ru</a>
+        </div>
+    </section>
+    <section class="bottom">
+        <ul>
+            <li><a href="#">О сервисе</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Правила пользования сайтом</a></li>
+            <li><a href="#">Оферта</a></li>
+        </ul>
+        <p class="copyright">Copyright 2015 Духовная Интеграционионика</p>
+    </section>
+</footer>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Вход</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group mail">
+                    <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                    <input type="text" class="form-control" aria-describedby="inputSuccess5Status"
+                           placeholder="Ваш e-mail">
+                </div>
+                <div class="form-group password">
+                    <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                    <input type="text" class="form-control" aria-describedby="inputSuccess5Status"
+                           placeholder="Ваш пароль">
+                </div>
+                <button class="bnt-color bnt-color__small">Войти</button>
+                <br>
+
+                <div class="clearfix">
+                    <div class="form-group checkbox-group pull-left">
+                        <div class="checkbox">
+                            <input type="checkbox" name="ooptionsCheckbox" id="ooptionsCheckbox">
+                            <label for="ooptionsCheckbox"></label>
+                            Запомнить меня
+                        </div>
+                    </div>
+                    <a href="#" class="pull-right">Забыли пароль?</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                Нажимая на кнопку «Вход» Вы подтверждаете согласие с
+                <a href="#">Политикой конфиденциальности</a> и <a href="#">Условиями пользования сайтом</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

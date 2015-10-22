@@ -28,18 +28,6 @@
 <body>
 <div class="container-fluid">
     <div class="example-block">
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Dropdown
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
         <h1>Заголовок 1</h1>
         <h2>Заголовок 2</h2>
         <h3>Заголовок 3</h3>
@@ -51,9 +39,11 @@
     </div>
     <div class="example-block">
         <h3>Кнопки</h3>
-        <button class="btn">Button text</button><br>
+        <button class="btn">Button text</button>
+				<button class="btn" disabled>Button text</button>
         <button class="btn btn__small">Button text</button><br>
-        <button class="bnt-color">Button text</button><br>
+        <button class="bnt-color">Button text</button>
+				<button class="bnt-color" disabled>Button text</button>
         <button class="bnt-color bnt-color__small">Button text</button>
     </div>
     <div class="example-block">
@@ -68,30 +58,43 @@
             </div>
             <div class="checkbox">
                 <input type="checkbox" name="optionsCheckbox" id="optionsCheckbox2" checked>
-                <label for="optionsCheckbox2"></label>
+                <label for="optionsCheckbox2"></label>Option
             </div>
+					<div class="checkbox disabled">
+						<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox3" disabled>
+						<label for="optionsCheckbox2"></label>Option two is disabled
+					</div>
         </div>
         <h5>Radio</h5>
         <div class="form-group radio-group">
             <div class="radio">
                 <input type="radio" name="optionsRadios" id="optionsRadios">
-                <label for="optionsRadios"></label>
+                <label for="optionsRadios"></label>Option
             </div>
             <div class="radio">
                 <input type="radio" name="optionsRadios" id="optionsRadios2" checked>
-                <label for="optionsRadios2"></label>
+                <label for="optionsRadios2"></label>Option
             </div>
+					<div class="radio disabled">
+						<input type="checkbox" value="" disabled>
+						<label></label>Option two is disabled
+
+					</div>
         </div>
         <h5>Toggle</h5>
         <div class="form-group toggle">
-            <div class="checkbox">
+            <div class="toggle">
                 <input type="checkbox" name="optionsToggle" id="optionsToggle">
                 <label for="optionsToggle"></label>
             </div>
-            <div class="checkbox">
+            <div class="toggle">
                 <input type="checkbox" name="optionsToggle2" id="optionsToggle2" checked>
                 <label for="optionsToggle2"></label>
             </div>
+					<div class="toggle disabled">
+						<input type="checkbox" name="optionsToggle2" id="optionsToggle3" disabled>
+						<label for="optionsToggle3"></label>
+					</div>
         </div>
     </section>
     </div>
@@ -106,6 +109,11 @@
             <input type="text" class="form-control allow-clear"  aria-describedby="inputSuccess5Status">
             <!--<div class="glyphicon glyphicon-remove" aria-hidden="true"></div>-->
         </div>
+			<div class="form-group disabled">
+				<label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+				<input type="text" class="form-control allow-clear"  aria-describedby="inputSuccess5Status" placeholder="заблокировано" disabled>
+				<!--<div class="glyphicon glyphicon-remove" aria-hidden="true"></div>-->
+			</div>
         <div class="form-group">
             <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
             <textarea class="form-control allow-clear"  aria-describedby="inputSuccess5Status"></textarea>
@@ -129,12 +137,24 @@
                 <div class="caret-color pull-right"><span class="caret "></span></div>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-                <li><a href="#">Action</a></li>
+                <li class="disabled"><a href="#">заблокировано</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
                 <li role="separator" class="divider"><a href="#">Separated link</a></li>
             </ul>
         </div>
+			<div class="dropdown">
+				<button class="dropdown-toggle text-left disabled" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Меню заблокировано
+					<div class="caret-color pull-right"><span class="caret "></span></div>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+					<li class="disabled"><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li role="separator" class="divider"><a href="#">Separated link</a></li>
+				</ul>
+			</div>
         <div class="btn-group caret-btn">
             <button type="button" class="dropdown-toggle dropdown-toggle-caret" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="caret"></span>

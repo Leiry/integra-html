@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DI-html.iml" filepath="$PROJECT_DIR$/.idea/DI-html.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/integra-html.iml" filepath="$PROJECT_DIR$/.idea/integra-html.iml" />
     </modules>
   </component>
 </project>

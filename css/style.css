@@ -34,7 +34,7 @@ body {
   background-color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #000;
+  color: #212121;
   height: 100%;
 }
 h1,
@@ -1579,9 +1579,15 @@ header.header ul.dropdown-menu li a:hover {
   font-size: 20px;
   color: #8b7f8d;
   line-height: 20px;
+  vertical-align: middle;
 }
 .raiting-block-stars i.fa-star {
   color: #a550a2;
+}
+.raiting-block-stars p {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
 }
 .reviews {
   background-color: #f6f6f6;
@@ -1934,14 +1940,38 @@ section.ask-trainer .clearfix h3 {
   border-left: 1px #cccccc solid;
   background-color: #f5f5f5;
 }
+.schedule-trainings .schedule-training .right-container p.full-price {
+  color: #8b7f8d;
+  font-size: 16px;
+  margin: 0;
+  position: relative;
+}
+.schedule-trainings .schedule-training .right-container p.full-price:before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: -5px;
+  border: 1px solid #8b7f8d;
+  width: 70px;
+  height: 0px;
+  -moz-transform: rotate(-11deg);
+  /* Для Firefox */
+  -ms-transform: rotate(-11deg);
+  /* Для IE */
+  -webkit-transform: rotate(-11deg);
+  /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(-11deg);
+  /* Для Opera */
+  transform: rotate(-9deg);
+}
 .schedule-trainings .schedule-training .right-container .right {
   margin-left: 30px;
 }
 .schedule-trainings .schedule-training .right-container .right h3 {
   color: #582257;
 }
-.schedule-trainings .schedule-training .right-container p {
-  color: #4b454c;
+.schedule-trainings .schedule-training .right-container p.discount-time {
+  color: #212121;
   font-size: 12px;
   font-style: italic;
   margin: 17px 0 0 0;
@@ -1996,7 +2026,7 @@ section.ask-trainer .clearfix h3 {
   background-color: #f6f6f6;
   color: #aaaaaa;
   padding: 10px 13px;
-  box-shadow: 0px -1px 6px -4px #000000 inset;
+  box-shadow: 0px -1px 6px -4px #212121 inset;
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
   position: absolute;
@@ -2059,12 +2089,32 @@ section.ask-trainer .clearfix h3 {
 }
 #profile_trainer .top .info-trainer {
   width: 40%;
+  position: relative;
+}
+#profile_trainer .top .info-trainer a.tosettings {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #1e051d;
+}
+#profile_trainer .top .info-trainer a.tosettings:hover i {
+  color: #a550a2;
+}
+#profile_trainer .top .info-trainer p.name,
+#profile_trainer .top .info-trainer p.surname {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#profile_trainer .top .info-trainer p.surname {
+  margin: 0;
+  line-height: 23px;
+}
+#profile_trainer .top .info-trainer p.name {
+  margin-top: 15px;
 }
 #profile_trainer .top .info-trainer p.job,
 #profile_trainer .top .info-trainer p.place {
   font-size: 14px;
-}
-#profile_trainer .top .info-trainer p.place {
   color: #8b7f8d;
 }
 #profile_trainer .top .info-trainer p.place i {
@@ -2075,8 +2125,16 @@ section.ask-trainer .clearfix h3 {
   background-color: #f6f6f6;
   font-size: 14px;
   font-style: italic;
-  color: #8b7f8d;
+  color: #212121;
   padding: 12px;
+  margin-top: 15px;
+}
+#profile_trainer .top .info-trainer button.btn-color {
+  margin: 0 auto;
+  display: block;
+}
+#profile_trainer .abouttrainer h4 {
+  color: #8b7f8d;
 }
 #profile_trainer .abouttrainer ul li {
   font-weight: 500;
@@ -2134,7 +2192,6 @@ section.ask-trainer .clearfix h3 {
   z-index: 100;
   height: 110px;
   margin: 0 auto;
-  border-radius: 10px;
 }
 #slides .slide {
   padding: 0;
@@ -2149,28 +2206,28 @@ section.ask-trainer .clearfix h3 {
   width: 87%;
   white-space: pre-wrap;
 }
-.slides_container {
+#slides .slides_container {
   width: 550px;
   overflow: hidden;
   position: relative;
 }
-.pagination {
+#slides .pagination {
   padding-left: 22%;
   z-index: 50;
   margin-top: 6px;
 }
-.pagination li {
+#slides .pagination li {
   float: left;
   margin: 0 0 0 5px;
 }
-.pagination li:first-child a,
-.pagination li:last-child a {
+#slides .pagination li:first-child a,
+#slides .pagination li:last-child a {
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
 }
-.pagination li a {
+#slides .pagination li a {
   border-radius: 50%;
   border: 2px solid #8b7f8d;
   display: block;
@@ -2182,23 +2239,72 @@ section.ask-trainer .clearfix h3 {
   font-size: 0;
   padding: 0;
 }
-.pagination li a:hover {
+#slides .pagination li a:hover {
   border: 2px solid #582257;
   background-color: white;
 }
-.pagination li span {
+#slides .pagination li span {
   padding: 0;
 }
-.pagination li.current a {
+#slides .pagination li.current a {
   border: 2px solid #582257;
 }
-.pagination:after {
+#slides .pagination :after {
   display: table;
   clear: both;
   content: '';
 }
-.slides_control {
+#slides .slides_control {
   height: 110px;
+}
+.review-big p {
+  color: #8b7f8d;
+}
+.review-big .top {
+  background-color: #f5f5f5;
+  padding: 27px 30px;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+.review-big .top p {
+  margin: 0;
+}
+.review-big .top a,
+.review-big .top .name {
+  font-weight: 500;
+}
+.review-big .top .user-info {
+  margin-bottom: 10px;
+}
+.review-big .top .user-info .user-photo {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.review-big button {
+  background-color: #f5f5f5;
+  margin-left: 10px;
+}
+.review-big button i {
+  margin-right: 3px;
+}
+.review-big p.date {
+  margin-top: 55px;
+}
+.review-big p.date span {
+  color: #582257;
+  font-weight: 500;
+}
+.review-big.training .top p a.name {
+  color: #1e051d;
+}
+.review-big.training .top p.date {
+  margin-top: 10px;
+}
+.review-big.training .top .logo-di {
+  width: 60px;
+  height: 60px;
+  margin-right: 30px;
 }
 .subscription {
   background: url('../images/letter-bg.png') no-repeat;
@@ -2252,7 +2358,7 @@ section.ask-trainer .clearfix h3 {
   position: absolute;
   height: 205px;
   top: 85px;
-  left: 0px;
+  left: 0;
   z-index: 11;
 }
 footer.footer {

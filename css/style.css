@@ -140,11 +140,11 @@ button:focus {
 }
 .btn {
   background-color: #ffffff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
   color: #582257;
   cursor: pointer;
   font-size: 12px;
@@ -1678,6 +1678,7 @@ section.ask-trainer .clearfix h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  vertical-align: bottom;
 }
 .table tbody tr td span,
 .table tbody tr p span,
@@ -1988,9 +1989,17 @@ section.ask-trainer .clearfix h3 {
   border-radius: 50%;
 }
 .profile .top {
-  padding-top: 190px;
+  padding-top: 75px;
   background: url('../images/profile-header.png') no-repeat;
   background-size: 100% 300px;
+}
+.profile .top h1 {
+  color: #ffffff;
+  font-size: 42px;
+  line-height: 40px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 145px 0;
 }
 .profile .card {
   background-color: #f9f9f9;
@@ -2007,7 +2016,7 @@ section.ask-trainer .clearfix h3 {
   height: 486px;
   background: url('../images/profile-base.png') no-repeat;
   position: absolute;
-  top: -70px;
+  top: -60px;
   left: -30px;
   z-index: 100;
 }
@@ -2017,7 +2026,7 @@ section.ask-trainer .clearfix h3 {
   height: 480px;
   background: url('../images/profile-base2.png') no-repeat;
   position: absolute;
-  top: -70px;
+  top: -60px;
   left: -30px;
   z-index: 100;
 }
@@ -2035,8 +2044,13 @@ section.ask-trainer .clearfix h3 {
   z-index: 500;
 }
 .profile .card .tosettings:hover {
-  color: #582257;
+  background-color: #582257;
+  color: #ffffff;
   cursor: pointer;
+}
+.profile .card .tosettings:active {
+  background-color: #1e051d;
+  color: #ffffff;
 }
 .profile .card p {
   color: #1e051d;
@@ -2070,6 +2084,12 @@ section.ask-trainer .clearfix h3 {
   text-transform: uppercase;
   color: #8b7f8d;
 }
+.profile table td {
+  vertical-align: bottom;
+}
+.profile table td:first-child {
+  padding: 8px 0;
+}
 .profile table.contacts td:first-child {
   width: 17%;
 }
@@ -2077,6 +2097,10 @@ section.ask-trainer .clearfix h3 {
   background-color: #f9f9f9;
   padding: 20px;
   margin-bottom: 80px;
+}
+.profile .btn {
+  border-color: #651c58;
+  color: #651c58;
 }
 #curator .table.contacts {
   margin-bottom: 100px;
@@ -2289,11 +2313,14 @@ section.ask-trainer .clearfix h3 {
   margin-right: 3px;
 }
 .review-big p.date {
-  margin-top: 55px;
+  margin-top: 35px;
 }
 .review-big p.date span {
-  color: #582257;
+  color: #4b454c;
   font-weight: 500;
+}
+.review-big.training .top .user-info {
+  margin-bottom: 0;
 }
 .review-big.training .top p a.name {
   color: #1e051d;

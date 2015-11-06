@@ -139,7 +139,7 @@ button:focus {
   margin: auto;
 }
 .btn {
-  background-color: #ffffff;
+  background-color: inherit;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -175,7 +175,7 @@ button:focus {
   cursor: auto;
 }
 .btn__small {
-  padding: 7px 16px;
+  padding: 5px 18px;
 }
 .btn-color {
   -webkit-border-radius: 2px;
@@ -189,11 +189,11 @@ button:focus {
   border-left: none;
   border-right: none ;
   border-bottom: 3px solid #1e051d;
-  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
-  -o-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
-  -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
-  -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
-  -ms-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
+  -o-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
+  -moz-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
+  -ms-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
   cursor: pointer;
   padding: 10px 18px;
   outline: none;
@@ -201,10 +201,10 @@ button:focus {
 .btn-color:hover {
   background: linear-gradient(to bottom, #582257, #a550a2);
   border-bottom: 3px solid #1e051d;
-  -o-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6), -1px 11px 9px -9px #582257 inset;
-  -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6), -1px 11px 9px -9px #582257 inset;
-  -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6), -1px 11px 9px -9px #582257 inset;
-  -ms-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6), -1px 11px 9px -9px #582257 inset;
+  -o-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6), -1px 11px 9px -9px #582257 inset;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6), -1px 11px 9px -9px #582257 inset;
+  -moz-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6), -1px 11px 9px -9px #582257 inset;
+  -ms-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6), -1px 11px 9px -9px #582257 inset;
 }
 .btn-color:active {
   background: #582257;
@@ -220,7 +220,7 @@ button:focus {
 .btn-color:disabled:hover {
   background: linear-gradient(to top, #582257, #a550a2);
   color: #ffffff;
-  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6), -1px -11px 9px -9px #582257 inset;
 }
 .container-fluid {
   height: 100%;
@@ -582,7 +582,7 @@ textarea {
   width: 100%;
 }
 #questionnaire .questions .left .form-group {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   padding: 10px 10px 10px 20px;
   margin: 0;
   position: relative;
@@ -647,7 +647,7 @@ textarea {
   margin: 40px 0 75px 0;
 }
 #questionnaire .right {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   width: 48%;
   padding: 20px;
   position: relative;
@@ -1492,11 +1492,12 @@ header.header ul.dropdown-menu li a:hover {
   display: block;
 }
 .review {
-  background-color: #f5f5f5;
+  background-color: #f7f7f7;
   border: 1px dashed #8b7f8d;
   border-radius: 4px;
   padding: 20px 20px 9px 20px;
   width: 460px;
+  height: 330px;
   color: #4b454c;
   position: relative;
   box-shadow: 0 5px 15px -6px rgba(0, 0, 0, 0.8);
@@ -1547,13 +1548,20 @@ header.header ul.dropdown-menu li a:hover {
   text-decoration: none;
   font-weight: 500;
 }
+.review .content-container {
+  overflow: hidden;
+}
 .review .content-container p {
   font-size: 14px;
   line-height: 20px;
-  margin: 10px 0 20px 0;
+  margin: 20px 0 20px 0;
   white-space: pre-line;
   word-wrap: normal;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+  height: 180px;
 }
 .review .toolbar {
   margin-right: -20px;
@@ -1618,11 +1626,14 @@ header.header ul.dropdown-menu li a:hover {
   width: 300px;
   height: 37px;
 }
+.reviews .form-group textarea {
+  height: 100px;
+}
 section.answers {
-  padding: 70px 0 30px 0;
+  padding: 70px 0 0 0;
 }
 section.answers .wrapper h2 {
-  margin: 0 0 30px 0;
+  margin: 0 0 65px 0;
 }
 section.answers .wrapper .btn {
   display: block;
@@ -1901,10 +1912,26 @@ section.ask-trainer .clearfix h3 {
 #schedule .schedule-filter .dropdown .dropdown-toggle {
   font-size: 12px;
   color: #8b7f8d;
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
 }
-#schedule .schedule-filter .tab-content {
+#schedule .schedule-filter .dropdown.pull-right button {
+  margin-bottom: 15px;
+}
+#schedule .tab-content {
   margin-top: 20px;
+}
+#schedule .tab-content .results {
+  margin-bottom: 22px;
+}
+#schedule .tab-content .results p {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 25px 0 0;
+  padding: 5px 15px;
+  background-color: #f5f5f5;
+}
+#schedule .tab-content .results a {
+  vertical-align: middle;
 }
 #schedule h2 {
   margin: 55px 0 50px 0;
@@ -1942,7 +1969,7 @@ section.ask-trainer .clearfix h3 {
   background-color: #f5f5f5;
 }
 .schedule-trainings .schedule-training .right-container p.full-price {
-  color: #8b7f8d;
+  color: #fcaf32;
   font-size: 16px;
   margin: 0;
   position: relative;
@@ -1952,18 +1979,18 @@ section.ask-trainer .clearfix h3 {
   content: "";
   top: 10px;
   left: -5px;
-  border: 1px solid #8b7f8d;
   width: 70px;
-  height: 0px;
-  -moz-transform: rotate(-11deg);
+  height: 1px;
+  background-color: #fcaf32;
+  -moz-transform: rotate(-180deg);
   /* Для Firefox */
-  -ms-transform: rotate(-11deg);
+  -ms-transform: rotate(-180deg);
   /* Для IE */
-  -webkit-transform: rotate(-11deg);
+  -webkit-transform: rotate(-180deg);
   /* Для Safari, Chrome, iOS */
-  -o-transform: rotate(-11deg);
+  -o-transform: rotate(-180deg);
   /* Для Opera */
-  transform: rotate(-9deg);
+  transform: rotate(-180deg);
 }
 .schedule-trainings .schedule-training .right-container .right {
   margin-left: 30px;
@@ -1973,9 +2000,12 @@ section.ask-trainer .clearfix h3 {
 }
 .schedule-trainings .schedule-training .right-container p.discount-time {
   color: #212121;
-  font-size: 12px;
+  font-size: 13px;
   font-style: italic;
   margin: 17px 0 0 0;
+}
+.schedule-trainings .schedule-training .right-container p.discount-time i {
+  margin-right: 5px;
 }
 .user-photo {
   border-radius: 50%;
@@ -2002,7 +2032,7 @@ section.ask-trainer .clearfix h3 {
   margin: 0 0 145px 0;
 }
 .profile .card {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   border-radius: 10px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -2094,7 +2124,7 @@ section.ask-trainer .clearfix h3 {
   width: 17%;
 }
 .profile div.bottom {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   padding: 20px;
   margin-bottom: 80px;
 }
@@ -2117,31 +2147,43 @@ section.ask-trainer .clearfix h3 {
 }
 #profile_trainer .top .info-trainer a.tosettings {
   position: absolute;
-  top: 5px;
+  top: 0px;
   right: 5px;
   color: #1e051d;
 }
 #profile_trainer .top .info-trainer a.tosettings:hover i {
   color: #a550a2;
 }
-#profile_trainer .top .info-trainer p.name,
-#profile_trainer .top .info-trainer p.surname {
+#profile_trainer .top .info-trainer .user-information {
+  max-width: 56%;
+}
+#profile_trainer .top .info-trainer .user-information p.name,
+#profile_trainer .top .info-trainer .user-information p.surname,
+#profile_trainer .top .info-trainer .user-information p.lastname {
   text-overflow: ellipsis;
   overflow: hidden;
+  max-width: 90%;
 }
-#profile_trainer .top .info-trainer p.surname {
-  margin: 0;
-  line-height: 23px;
+#profile_trainer .top .info-trainer .user-information p.surname {
+  margin: -5px 0 0 0;
+  line-height: 31px;
 }
-#profile_trainer .top .info-trainer p.name {
-  margin-top: 15px;
+#profile_trainer .top .info-trainer .user-information p.name {
+  margin-top: 12px;
+  white-space: nowrap;
 }
-#profile_trainer .top .info-trainer p.job,
-#profile_trainer .top .info-trainer p.place {
+#profile_trainer .top .info-trainer .user-information p.lastname {
+  margin-top: -3px;
+}
+#profile_trainer .top .info-trainer .user-information p.job,
+#profile_trainer .top .info-trainer .user-information p.place {
   font-size: 14px;
   color: #8b7f8d;
 }
-#profile_trainer .top .info-trainer p.place i {
+#profile_trainer .top .info-trainer .user-information p.job {
+  margin: 12px 0 5px 0;
+}
+#profile_trainer .top .info-trainer .user-information p.place i {
   color: #a550a2;
   margin-right: 3px;
 }
@@ -2168,7 +2210,7 @@ section.ask-trainer .clearfix h3 {
   margin-right: 10px;
 }
 #profile_trainer .trainings {
-  margin-top: 80px;
+  margin: 80px 0 50px 0;
 }
 #profile_trainer .trainings .schedule-trainings {
   margin-top: 40px;
@@ -2236,7 +2278,7 @@ section.ask-trainer .clearfix h3 {
   position: relative;
 }
 #slides .pagination {
-  padding-left: 22%;
+  padding-left: 41%;
   z-index: 50;
   margin-top: 6px;
 }

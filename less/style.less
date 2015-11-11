@@ -168,7 +168,7 @@ button:focus {
 @gray-profile-bg: #fafafa;
 @gray-text: #727272;
 @white: #ffffff;
-@white-bg: #f7f7f7;
+@white-bg: #fafafa;
 @green: #0f9b58;
 @green-light: #33b679;
 @green-alert-bg: #50c08c;
@@ -285,7 +285,7 @@ button:focus {
     }
 
     &__small {
-        padding: 7px 18px;
+        padding: 7px 15px;
     }
 
     &:disabled {
@@ -414,6 +414,14 @@ button:focus {
         input[type="checkbox"]:checked + label:before {
             background: url('../images/checkbox-sprite.jpg') center -107px no-repeat;
         }
+
+        .checkbox {
+            margin: 0 0 10px 0;
+
+            &:last-child {
+                margin:0;
+            }
+        }
     }
 
     &.toggle {
@@ -528,7 +536,7 @@ button:focus {
 }
 
 .disabled,.btn.disabled, .btn[disabled],
-fieldset[disabled] .btn,.bnt-color[disabled] {
+fieldset[disabled] .btn,.btn-color[disabled] {
     opacity: 0.5;
 }
 
@@ -557,6 +565,12 @@ textarea.form-control,
     position: relative;
     font-size: 12px;
     font-weight: 400;
+
+    &:focus {
+        outline: none;
+        border: solid 2px #8b7f8d;
+        box-shadow: none;
+    }
 }
 
 input[type="text"] {
@@ -814,7 +828,7 @@ textarea{
             }
         }
 
-        .bnt-color {
+        .btn-color {
             margin: 40px 0 75px 0;
         }
     }
@@ -944,6 +958,54 @@ textarea{
             font-weight: 700;
         }
     }
+
+
+}
+
+.dropdown.withtittle{
+    margin: 30px 0 0 0;
+    .panel-group {
+        background-color: inherit;
+        border-color: @white;
+
+        .panel-default {
+            border-color: @white;
+
+            .panel-heading {
+                background-color: @white;
+                border-color: @white;
+                padding: 0;
+            }
+        }
+
+        .panel {
+            box-shadow: none;
+        }
+
+        .panel-body {
+            padding-left: 0;
+        }
+    }
+    .panel-group .panel-heading + .panel-collapse > .panel-body,
+     .panel-group .panel-heading + .panel-collapse > .list-group {
+        border: none;
+     }
+
+     div.h6 {
+        color: @purple-dark;
+        text-transform: uppercase;
+        margin: 0;
+     }
+
+     i {
+         line-height: 8px;
+         margin-left: 5px;
+     }
+
+     div.h6, i {
+        display: inline-block;
+        vertical-align: top;
+     }
 }
 
 //*** Button-drop arrow ***//
@@ -995,6 +1057,7 @@ textarea{
             }
         }
     }
+
 }
 
 .btn-group.open .dropdown-toggle {
@@ -1268,11 +1331,6 @@ header.header {
             }
         }
 
-        .bnt-color {
-            display: block;
-            width: 100%;
-        }
-
         .clearfix {
             margin: 5px 0 25px 0;
 
@@ -1284,6 +1342,11 @@ header.header {
                 font-size: 12px;
             }
         }
+    }
+
+    .btn-color {
+        display: block;
+        width: 100%;
     }
 
     .modal-footer {
@@ -1955,8 +2018,8 @@ header.header {
         }
 
         a {
-            border-top: 1px dashed @purple-light;
-            border-left: 1px dashed @purple-light;
+            border-top: 1px dashed @purple-smoke;
+            border-left: 1px dashed @purple-smoke;
             border-top-left-radius: 4px;
             text-decoration: none;
 
@@ -1990,7 +2053,7 @@ header.header {
     padding: 50px 0 70px 0;
 
     h2 {
-        margin-bottom: 50px;
+        margin: 0 0 47px 0;
     }
     .abouttrainer {
            margin-bottom: 90px;
@@ -2395,31 +2458,6 @@ section.ask-trainer {
         padding: 30px;
         background-color: @gray;
 
-        .nav.nav-tabs {
-            border: 1px @gray-standard solid;
-            border-radius: 4px;
-            margin-bottom: 30px;
-            li {
-                // border: 1px @gray-standard solid;
-                width: 50%;
-                text-align: center;
-                font-size: 12px;
-                font-weight: 500;
-                text-transform: uppercase;
-
-                a {
-                    border: none;
-                    background-color: inherit;
-                }
-
-            }
-
-            li.active {
-                background-color: @gray-standard;
-            }
-
-        }
-
         .dropdown {
             width: 430px;
 
@@ -2549,6 +2587,70 @@ section.ask-trainer {
     }
 
 
+//*** Tab panels  ***//
+
+.nav.nav-tabs {
+    border: 1px @gray-standard solid;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    li {
+        // border: 1px @gray-standard solid;
+        width: 50%;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        a {
+            border: none;
+            background-color: inherit;
+        }
+
+    }
+
+    li.active,
+    li.active a,
+    li:hover,
+    li:focus,
+    li:hover a,
+    li:focus a,
+    li.active:hover a
+     {
+        background-color: @gray-standard;
+        border: none;
+        outline: none;
+        color: @white;
+    }
+
+}
+
+#newcity {
+    .modal-content {
+        width: 620px;
+
+        .nav.nav-tabs {
+            margin-bottom: 25px;
+        }
+
+        .form-group.mail {
+            width: 270px;
+        }
+
+        input {
+            margin: 0;
+        }
+
+        .clearfix {
+            margin: 25px 0;
+        }
+    }
+
+    .modal-footer {
+        background-color: @white;
+        border: none;
+        margin-top: 5px;
+    }
+}
 //*** Профиль консультанта и выпускника ***//
 
 .user-photo {
@@ -2819,7 +2921,7 @@ section.ask-trainer {
     }
 
     .trainings {
-        margin: 80px 0 50px 0;
+        margin: 80px 0 80px 0;
 
         .schedule-trainings {
             margin-top: 40px;
@@ -3037,6 +3139,125 @@ section.ask-trainer {
     }
 }
 
+//*** Репортажи ***//
+
+#reports {
+    section.top {
+        background-color: @purple-light;
+        box-shadow: -2px -95px 340px 20px @purple-dark inset;
+        color: @white;
+        padding: 50px 0 15px 0;
+
+        .wrapper {
+            width: 620px;
+        }
+
+        h2, p, a {
+            color: @white;
+
+            span {
+                color: @gray-purple;
+            }
+        }
+
+        h2 {
+            margin: 0 0 10px 0;
+        }
+
+        .repot-movie {
+            box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.6);
+            margin-bottom: 40px;
+            width: 100%;
+            height: 300px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .clearfix {
+            .left, .right {
+                width: 50%;
+            }
+        }
+
+        button {
+            display: block;
+            margin: 30px  auto;
+            width: 270px;
+        }
+
+        a.down {
+            display: block;
+            margin: 0 auto;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+            width: 300px;
+
+            i {
+                font-size: 30px;
+            }
+
+            &:hover {
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+    .btn-group.caret-btn.withtext {
+        .dropdown-menu {
+            border: none;
+            margin: 0;
+            box-shadow: none;
+            position: initial;
+        }
+    }
+    h6 {
+        text-transform: uppercase;
+        color: @purple-dark;
+        margin: 40px 0 25px 0;
+    }
+    .filter.pull-left {
+        .checkbox {
+            color: @purple-smoke-dark;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    .reports-container {
+        width: 625px;
+
+        .report {
+            width: 300px;
+            float: left;
+            margin: 0 20px 30px 0;
+
+            &:nth-child(2n+2) {
+                margin-right: 0;
+            }
+
+            h6 {
+                text-transform: uppercase;
+                margin: 15px 0 10px 0;
+            }
+
+            p {
+                margin-bottom: 0;
+                font-size: 12px;
+                font-weight: 500;
+
+                span {
+                    color: @purple-smoke;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
 
 //*** subscription ***//
 
@@ -3081,7 +3302,7 @@ section.ask-trainer {
             padding: 0 30px;
         }
 
-        .bnt-color {
+        .btn-color {
             width: 220px;
             text-align: center;
             margin: 10px auto;

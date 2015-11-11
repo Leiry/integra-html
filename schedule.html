@@ -52,11 +52,11 @@
                         <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"><a href="#">Separated link</a></li>
                     </ul>
-                    <a href="#" class="yourcity"><i>Не нашли свой город?</i></a>
+                    <a href="#" class="yourcity" data-toggle="modal" data-target="#newcity"><i>Не нашли свой город?</i></a>
                 </div>
             </div>
         </div>
-        <!-- Tab panes -->
+        <!-- Tab panels -->
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="di-1"> <!-- ДИ-1 -->
                         <div class="results">
@@ -133,7 +133,10 @@
                         </div>
                 </div>
             <div role="tabpanel" class="tab-pane" id="di-2"> <!-- ДИ-2 -->
-                    <h2 class="text-center">Тренинги (55)</h2>
+				<div class="results">
+					<p>Найдено тренингов: <b>5</b></p>
+					<a href="#">Показать все тренинги</a>
+				</div>
                     <div class="schedule-trainings">
                         <div class="schedule-training clearfix">
                             <div class="left-container pull-left">
@@ -154,7 +157,7 @@
                                         <button class="btn-color">Оплатить участие</button><br>
                                     </div>
                                 </div>
-								<p class="discount-time">* Акция действует до 12.08.2015</p>
+								<p class="discount-time"><i class="fa fa-exclamation-triangle"></i> Акция действует до 12.08.2015</p>
                             </div>
                         </div>
                         <div class="schedule-training clearfix">
@@ -175,7 +178,7 @@
                                         <button class="btn-color">Оплатить участие</button><br>
                                     </div>
                                 </div>
-								<p class="discount-time">* Акция действует до 12.08.2015</p>
+								<p class="discount-time"><i class="fa fa-exclamation-triangle"></i> Акция действует до 12.08.2015</p>
                             </div>
                         </div>
                         <div class="schedule-training clearfix">
@@ -196,7 +199,7 @@
                                         <button class="btn-color">Оплатить участие</button><br>
                                     </div>
                                 </div>
-								<p class="discount-time">* Акция действует до 12.08.2015</p>
+								<p class="discount-time"><i class="fa fa-exclamation-triangle"></i> Акция действует до 12.08.2015</p>
                             </div>
                         </div>
                     </div>
@@ -205,6 +208,58 @@
         </div>
     </div>
     </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="newcity" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Заявка на проведение тренинга</h4>
+				<p>Если в списке нет Вашего города,то Вы можете оставить заявку на проведение</p>
+			</div>
+			<div class="modal-body">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#modal-di-1" aria-controls="home" role="tab" data-toggle="tab">Духовная интеграционика - 1</a></li>
+					<li role="presentation"><a href="#modal-di-2" aria-controls="profile" role="tab" data-toggle="tab">Духовная интеграционика - 2</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="modal-di-1"> <!-- ДИ-1 -->
+						<form>
+							<div class="form-group mail">
+								<label class="control-label sr-only" for="inputSuccess55">Hidden label</label>
+								<input type="text" class="form-control allow-clear"  aria-describedby="inputSuccess5Status" placeholder="Введите Ваш город">
+							</div>
+							<div class="clearfix">
+								<div class="form-group mail pull-left">
+									<label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+									<input type="text" class="form-control" aria-describedby="inputSuccess5Status"
+										   placeholder="Введите Ваше Имя">
+								</div>
+								<div class="form-group mail pull-right">
+									<label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+									<input type="text" class="form-control" aria-describedby="inputSuccess5Status"
+										   placeholder="Введите Ваш e-mail">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="modal-di-2"> <!-- ДИ-2 -->
+						2
+					</div>
+				</div>
+				<button class="btn-color btn-color__small">Оставить заявку</button>
+			</div>
+
+			<div class="modal-footer">
+				Как только в Вашем городе будет заплонировать тренинг,<br> мы немедленно известим Вас.
+			</div>
+		</div>
+	</div>
 </div>
 
 </body>

@@ -108,6 +108,7 @@ span.color-yellow {
 
 span.color-purple {
     color: @purple-dark;
+    font-weight: 500;
 }
 
 a {
@@ -165,8 +166,10 @@ button:focus {
 @gray-icon: #f6f6f6;
 @gray-icon-border: #dfdfdf;
 @gray-icon-color: #aaaaaa;
+@gray-icon-shadow: #b3b3b3;
 @gray-profile-bg: #fafafa;
 @gray-text: #727272;
+@filter-border: #f2f2f2;
 @white: #ffffff;
 @white-bg: #fafafa;
 @green: #0f9b58;
@@ -1273,7 +1276,7 @@ header.header {
 
 .icon-new {
     background-color: @gray-icon;
-    box-shadow: 0px 7px 7px -4px #5f5d60 inset;
+    box-shadow: 0px 7px 7px -4px @gray-icon-shadow inset;
     border-radius: 50%;
     -webkit-border-radius : 50%;
     -moz-border-radius : 50% ;
@@ -1281,6 +1284,7 @@ header.header {
     -o-border-radius : 50% ;
     border: 1px solid @gray;
     font-size: 28px;
+    line-height: 60px;
     color: @purple-light;
     text-align: center;
     height: 60px;
@@ -2503,88 +2507,87 @@ section.ask-trainer {
         margin: 55px 0 50px 0;
     }
 }
-    .schedule-trainings {
-        .schedule-training {
-            border: 1px @gray-standard solid;
-            border-radius: 5px;
-            box-shadow: 0px 3px 14px -4px rgba(0, 0, 0, 0.8);
-            margin-bottom: 30px;
 
-            .right-container, .left-container {
-                padding: 30px;
-                width: 50%;
-            }
+.schedule-training {
+    border: 1px @gray-standard solid;
+    border-radius: 5px;
+    box-shadow: 0px 3px 14px -4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
 
-            h3 {
-                margin: 0 0 20px 0;
-                color: @purple-light;
-                font-weight: 500;
-            }
+    .right-container, .left-container {
+        padding: 30px;
+        width: 50%;
+    }
 
+    h3 {
+        margin: 0 0 20px 0;
+        color: @purple-light;
+        font-weight: 500;
+    }
 
-            p {
-                margin: 10px 0 0 0;
-                font-weight: 500;
-                color: @purple-smoke;
-            }
+    p {
+        margin: 10px 0 0 0;
+        font-weight: 500;
+        color: @purple-smoke;
+    }
 
-            .city, .training-date {
-                color: @purple-dark;
-            }
+    .city, .training-date {
+        color: @purple-dark;
+    }
 
-            .trainer {
-                color: @purple-light;
-            }
+    .trainer {
+        color: @purple-light;
+    }
 
-            .right-container {
-                border-left: 1px @gray-standard solid;
-                background-color: @gray;
+    .right-container {
+        border-left: 1px @gray-standard solid;
+        background-color: @gray;
 
-                p.full-price {
-                    color: @yellow;
-                    font-size: 16px;
-                    margin: 0;
-                    position: relative;
+        p.full-price {
+            color: @yellow;
+            font-size: 16px;
+            margin: 0;
+            position: relative;
 
-                    &:before {
-                        position: absolute;
-                        content: "";
-                        top:10px;
-                        left: -5px;
-                        //border:1px solid @yellow;
-                        width:70px;
-                        height:1px;
-                        background-color:@yellow;
-                        -moz-transform:rotate(-180deg); /* Для Firefox */
-                        -ms-transform: rotate(-180deg); /* Для IE */
-                        -webkit-transform: rotate(-180deg); /* Для Safari, Chrome, iOS */
-                        -o-transform: rotate(-180deg); /* Для Opera */
-                        transform: rotate(-180deg);
-                    }
-                }
-
-                .right {
-                    margin-left: 30px;
-
-                    h3 {
-                        color: @purple;
-                    }
-                }
-
-                p.discount-time {
-                    color: @black;
-                    font-size: 13px;
-                    font-style: italic;
-                    margin: 17px 0 0 0;
-
-                    i {
-                        margin-right: 5px;
-                    }
-                }
-
+            &:before {
+                position: absolute;
+                content: "";
+                top: 10px;
+                left: -5px;
+                //border:1px solid @yellow;
+                width: 70px;
+                height: 1px;
+                background-color: @yellow;
+                -moz-transform: rotate(-180deg); /* Для Firefox */
+                -ms-transform: rotate(-180deg); /* Для IE */
+                -webkit-transform: rotate(-180deg); /* Для Safari, Chrome, iOS */
+                -o-transform: rotate(-180deg); /* Для Opera */
+                transform: rotate(-180deg);
             }
         }
+
+        .right {
+            margin-left: 30px;
+
+            h3 {
+                color: @purple;
+            }
+        }
+
+        p.discount-time {
+            color: @black;
+            font-size: 13px;
+            font-style: italic;
+            margin: 17px 0 0 0;
+
+            i {
+                margin-right: 5px;
+            }
+        }
+
     }
+}
+
 
 
 //*** Tab panels  ***//
@@ -3258,6 +3261,160 @@ section.ask-trainer {
     }
 }
 
+//*** Newsline ***//
+
+.news-filter {
+    background-color: @gray;
+    border: 1px solid @filter-border;
+    border-radius: 3px;
+    padding: 20px;
+
+    button {
+        background-color: @gray;
+        box-sizing: border-box;
+        border: 1px solid @gray;
+        outline: none;
+        border-radius: 3px;
+        padding: 7px 9px;
+        color: @purple-dark;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0;
+
+        &:hover,&:focus,
+        &.active {
+            border: 1px solid @gray-standard;
+            box-sizing: border-box;
+            box-shadow: -1px 10px 20px -9px @gray-standard inset;
+        }
+    }
+}
+
+#newsline {
+    section.news-item {
+        .icon-new {
+            margin-top: 20px;
+        }
+
+        .news-container {
+            border-bottom: 1px solid @gray-standard;
+            padding: 20px 0 15px 0;
+            width: 92%;
+
+            article {
+                .news-picture {
+                    position: relative;
+                    box-shadow: -1px 30px 80px -9px  @black inset;
+                    border-radius: 5px;
+
+                        img {
+                            border-radius: 5px;
+                            height: 100%;
+                            width: 100%;
+                        }
+
+                    .news-author {
+                        position: absolute;
+                        bottom: 9px;
+                        left: 9px;
+                        width: 93%;
+
+                        .author-avatar,
+                        p.author-name {
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+
+                        .author-avatar {
+                            height: 40px;
+                            width: 40px;
+                            
+                            img {
+                                border: 1px solid @white;
+                                border-radius: 50%;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        p.author-name {
+                            color: @white;
+                            font-size: 14px;
+                            line-height: 35px;
+                            margin: 0 0 0 7px;
+                            max-width:80%;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                    }
+                }
+                .news-text {
+                    width: 65%;
+
+                    h4 {
+                        color: @purple;
+                    }
+
+                    p {
+                        max-height: 100px;
+                        max-width: 99%;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        data {
+            font-size: 12px;
+            color: @purple-smoke;
+            margin-top: 5px;
+        }
+    }
+
+    .schedule-training {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+
+        .right-container {
+            border: none;
+            background-color: inherit;
+            padding: 0;
+        }
+
+        .left-container{
+            padding: 0;
+        }
+    }
+
+    .review-big.trainer,
+    .review-big.training {
+        .top {
+            background-color: inherit;
+            padding: 5px 0 20px 0;
+            margin: 0;
+        }
+
+        p {
+        max-height: 100px;
+        max-width: 99%;
+        overflow: hidden;
+       text-overflow: ellipsis;
+
+        }
+
+    }
+
+    div.movie {
+        max-width: 100%;
+        height: 245px;
+        margin-bottom: 10px;
+    }
+}
+
 
 //*** subscription ***//
 
@@ -3382,5 +3539,23 @@ footer.footer {
     footer.footer .bottom ul {
         float: none;
         text-align: center;
+    }
+
+    #reports {
+        section.top {
+            box-shadow: -2px -95px 310px 20px #1e051d inset;
+            padding-top: 30px;
+
+            button {
+                margin: 15px auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    #reports section.top {
+        box-shadow: -2px -95px 335px 20px #1e051d inset;
+        padding-top: 55px;
     }
 }

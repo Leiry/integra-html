@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
 <head>
-    <meta charset="utf-8" />
-    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
-    <link href="css/select2.min.css" rel="stylesheet">
-    <!--<link href="css/interface.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!--        <link rel="stylesheet/less" type="text/css" href="less/interface.less">-->
-    <!--        <script src="js/less.min.js"></script>-->
-    <script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
-    <script src="js/select2.min.js"></script>
-    <script src="js/interface.js"></script>
-    <script src="js/bootstrap.js"></script>
+	<meta charset="utf-8" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
+	<link rel="stylesheet" type="text/css" href="css/select2.min.css" >
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<div id="schedule">
+<div id="schedule" style="height: 100%; margin-bottom: -113px;">
     <div class="wrapper">
         <div class="schedule-filter">
             <!-- Nav tabs -->
@@ -58,80 +56,38 @@
         </div>
         <!-- Tab panels -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="di-1"> <!-- ДИ-1 -->
-                        <div class="results">
-							<p>Найдено тренингов: <b>5</b></p>
-							<a href="#">Показать все тренинги</a>
+				<div role="tabpanel" class="tab-pane active" id="di-1"> <!-- ДИ-1 -->
+					<div class="results">
+						<p>Найдено тренингов: <b>5</b></p>
+						<a href="#">Показать все тренинги</a>
+					</div>
+					<div class="schedule-trainings">
+						<div class="schedule-training clearfix">
+							<div class="left-container pull-left">
+								<h3>Духовная интеграционика -1</h3>
+								<p>Дата: <span class="training-date">9 - 11 февраля, 2015</span></p>
+								<p>Город: <span class="city">Москва</span></p>
+								<p>Тренер: <span class="trainer">Константин Довлатов</span></p>
+							</div>
+							<div class="right-container pull-right">
+								<p class="full-price">45 000 p.</p>
+								<div class="clearfix">
+									<div class="left pull-left">
+										<h3>25 000 р.</h3>
+										<button class="btn-color">Оплатить участие</button>
+									</div>
+									<div class="right pull-left">
+										<h3>25 000 р.</h3>
+										<button class="btn-color">Оплатить участие</button>
+									</div>
+								</div>
+								<p class="discount-time">
+									<i class="fa fa-exclamation-triangle"></i>Акция действует до 12.08.2015</p>
+							</div>
 						</div>
-                        <div class="schedule-trainings">
-                            <div class="schedule-training clearfix">
-                                <div class="left-container pull-left">
-                                    <h3>Духовная интеграционика -1</h3>
-                                    <p>Дата: <span class="training-date">9 - 11 февраля, 2015</span></p>
-                                    <p>Город: <span class="city">Москва</span></p>
-                                    <p>Тренер: <span class="trainer">Константин Довлатов</span></p>
-                                </div>
-                                <div class="right-container pull-right">
-									<p class="full-price">45 000 p.</p>
-                                    <div class="clearfix">
-                                        <div class="left pull-left">
-                                            <h3>25 000 р.</h3>
-                                            <button class="btn-color">Оплатить участие</button>
-                                        </div>
-                                        <div class="right pull-left">
-                                            <h3>25 000 р.</h3>
-                                            <button class="btn-color">Оплатить участие</button><br>
-                                        </div>
-                                    </div>
-									<p class="discount-time"><i class="fa fa-exclamation-triangle"></i>Акция действует до 12.08.2015</p>
-                                </div>
-                            </div>
-                            <div class="schedule-training clearfix">
-                                <div class="left-container pull-left">
-                                    <h3>Духовная интеграционика -1</h3>
-                                    <p>Дата: <span class="training-date">9 - 11 февраля, 2015</span></p>
-                                    <p>Город: <span class="city">Москва</span></p>
-                                    <p>Тренер: <span class="trainer">Константин Довлатов</span></p>
-                                </div>
-                                <div class="right-container pull-right">
-									<p class="full-price">45 000 p.</p>
-                                    <div class="clearfix">
-                                        <div class="left pull-left">
-                                            <h3>25 000 р.</h3>
-                                            <button class="btn-color">Оплатить участие</button>
-                                        </div>
-                                        <div class="right pull-left">
-                                            <h3>25 000 р.</h3>
-                                            <button class="btn-color">Оплатить участие</button><br>
-                                        </div>
-                                    </div>
-									<p class="discount-time"><i class="fa fa-exclamation-triangle"></i>Акция действует до 12.08.2015</p>
-                                </div>
-                            </div>
-                            <div class="schedule-training clearfix">
-                                <div class="left-container pull-left">
-                                    <h3>Духовная интеграционика -1</h3>
-                                    <p>Дата: <span class="training-date">9 - 11 февраля, 2015</span></p>
-                                    <p>Город: <span class="city">Москва</span></p>
-                                    <p>Тренер: <span class="trainer">Константин Довлатов</span></p>
-                                </div>
-                                <div class="right-container pull-right">
-									<p class="full-price">45 000 p.</p>
-                                    <div class="clearfix">
-                                        <div class="left pull-left">
-                                            <h3>25 000 р.</h3>
-                                            <button class="btn-color">Оплатить участие</button>
-                                        </div>
-                                        <div class="right pull-left">
-                                            <h3>25 000 р.</h3>
-                                            <button class="btn-color">Оплатить участие</button><br>
-                                        </div>
-                                    </div>
-									<p class="discount-time"><i class="fa fa-exclamation-triangle"></i>Акция действует до 12.08.2015</p>
-                                </div>
-                            </div>
-                        </div>
-                </div>
+					</div>
+				</div>
+
             <div role="tabpanel" class="tab-pane" id="di-2"> <!-- ДИ-2 -->
 				<div class="results">
 					<p>Найдено тренингов: <b>5</b></p>
@@ -206,9 +162,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-</div>
+    </div style>
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="newcity" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -219,7 +175,7 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 				<h4 class="modal-title" id="myModalLabel">Заявка на проведение тренинга</h4>
-				<p>Если в списке нет Вашего города,то Вы можете оставить заявку на проведение</p>
+				<p>Если в списке нет Вашего города, то Вы можете оставить заявку на проведение</p>
 			</div>
 			<div class="modal-body">
 				<ul class="nav nav-tabs" role="tablist">
@@ -256,11 +212,29 @@
 			</div>
 
 			<div class="modal-footer">
-				Как только в Вашем городе будет заплонировать тренинг,<br> мы немедленно известим Вас.
+				Как только в Вашем городе будет запланирован тренинг,<br> мы немедленно известим Вас.
 			</div>
 		</div>
 	</div>
 </div>
-
+<footer class="footer" style="border: 1px #ccc6cd solid">
+	<section class="clearfix">
+		<div class="logo pull-left">
+			Духовная</br> Интеграционионика
+		</div>
+		<div class="pull-right">
+			<span>Служба поддержки:</span></br><a href="">support@dowlatow.ru</a>
+		</div>
+	</section>
+	<section class="bottom">
+		<ul>
+			<li><a href="#">О сервисе</a></li>
+			<li><a href="#">Политика конфиденциальности</a></li>
+			<li><a href="#">Правила пользования сайтом</a></li>
+			<li><a href="#">Оферта</a></li>
+		</ul>
+		<p class="copyright">Copyright 2015 Духовная Интеграционионика</p>
+	</section>
+</footer>
 </body>
 </html>

@@ -1,37 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
-    <link href="css/select2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
-    <script src="js/select2.min.js"></script>
-    <script src="js/interface.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.js"></script>
-
-    <!-- Скрипт плавного перехода -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('a[href^="#"]').click(function () {
-                elementClick = $(this).attr("href");
-                destination = $(elementClick).offset().top;
-                if($.browser.safari){
-                    $('body').animate( { scrollTop: destination }, 1100 );
-                }else{
-                    $('html').animate( { scrollTop: destination }, 1100 );
-                }
-                return false;
-            });
-        });
-    </script>
-
+	<meta charset="utf-8" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css">
+	<link rel="stylesheet" type="text/css" href="css/select2.min.css" >
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <main id="questionnaire">
@@ -39,17 +21,6 @@
         <h2 class="text-center">Путь к Мастерству - Мои Достижения!</h2>
     </section>
     <div class="wrapper">
-        <div id="filter-bar"> </div>
-        <table id="tbl" data-toggle="table" data-height="299" data-url="data1.json" data-toolbar="#filter-bar" data-show-toggle="true" data-show-columns="true" data-show-filter="true">
-            <thead>
-            <tr>
-                <th data-field="id" data-align="right" data-sortable="true">Item ID</th>
-                <th data-field="name" data-align="center" data-sortable="true">Item Name</th>
-                <th data-field="price" data-align="" data-sortable="true">Item Price</th>
-            </tr>
-            </thead>
-        </table>
-
         <div class="alert alert-warning" role="alert">
             Рекомендуется заполнить опросник сегодня вечером или завтра до 8 часов утра.
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -136,23 +107,22 @@
                         <textarea class="form-control allow-clear"  aria-describedby="inputSuccess5Status"></textarea>
                     </div>
 
-                    <div class="form-group radio-group">
-                        14. Мысль дня: <a href="#">"Как победить свою лень"</a>
-                        <div class="radio">
-                            <input type="radio" name="optionsRadios" id="optionsRadios">
-                            <label for="optionsRadios"></label>
-                             проработана
-                        </div>
-                        <div class="radio">
-                            <input type="radio" name="optionsRadios" id="optionsRadios2">
-                            <label for="optionsRadios2"></label>
-                             не проработана
-                        </div>
-                    </div>
+					<div class="form-group toggle thought">
+						<div class="toggle">
+							<p>Мысль дня проработана</p>
+							<input type="checkbox" name="optionsToggle" id="optionsToggle">
+							<label class="pull-right" for="optionsToggle"></label>
+						</div>
+					</div>
 
-                    <button class="bnt-color">Сохранить мои результаты</button>
+                    <button class="btn-color">Сохранить мои результаты</button>
+					<div class="saved">
+
+					</div>
                 </form>
-        </div>
+				<p class="questions-warning"><i class="fa fa-exclamation-triangle"></i>Опросник доступен для Выпускника на протяжении двух месяцев после окончания тренинга.</p>
+
+			</div>
             <div class="right pull-right">
                 <h4>Шкала тонов</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -327,6 +297,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true"><i class="fa fa-times"></i></span>
                 </button>
+
                 <table class="table map">
                     <thead>
                     <tr>
